@@ -10,7 +10,7 @@ const connection = createPool({
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     ssl: {
-        rejectUnauthorized: true
+        rejectUnauthorized: false
     }  
 });
 // const connection = createPool({
