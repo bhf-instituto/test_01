@@ -1,19 +1,22 @@
 import { createPool } from "mysql2/promise";
+import { configDotenv } from "dotenv";
 
-// const connection = createPool({
-//     host: process.env.DB_HOST,
-//     // port: process.env.DB_PORT,
-//     database: process.env.DB_NAME,
-//     user: process.env.DB_USER,
-//     password: process.env.DB_PASS   
-// });
+configDotenv();
+
 const connection = createPool({
-    host: "localhost",
-    // port: process.env.DB_PORT,
-    database: "render_test",
-    user: "node_user",
-    password: "a7I2;9|%v"   
+    host: process.env.DB_HOST,
+//     // port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS   
 });
+// const connection = createPool({
+//     host: "localhost",
+//     // port: process.env.DB_PORT,
+//     database: "render_test",
+//     user: "node_user",
+//     password: "a7I2;9|%v"   
+// });
 
 export default connection;
 
