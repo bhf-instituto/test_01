@@ -4,7 +4,7 @@ import dbConnection from './config/connectionMySQL.js'
 
 const app = express();
 
-// esto parsea las request
+// esto parsea las reques
 app.use(express.json());
 
 app.get('/', (req, res) => {
