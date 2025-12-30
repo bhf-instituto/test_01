@@ -48,6 +48,7 @@ const createUser = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             message: "error interno del servidor",
+            log: error
         })
     }
 }
